@@ -1,0 +1,60 @@
+div.dt-container .dt-paging .dt-paging-button {
+    width: 38px;
+    height: 38px;
+    padding: 0px;
+    background-color: rgba(34, 48, 62, 0.06) !important;
+    color: #384551 !important;
+    border-radius: .375rem;
+    margin-left: 6px;
+}
+
+div.dt-container .dt-paging .dt-paging-button:hover:not(.disabled) {
+    background-color: rgba(105, 108, 255, .16) !important;
+    background: rgba(105, 108, 255, .16) !important;
+    border-color: rgba(105, 108, 255, .16) !important;
+    color: #696cff !important;
+}
+
+div.dt-container .dt-paging .dt-paging-button.current, div.dt-container .dt-paging .dt-paging-button.current:hover {
+    width: 38px;
+    height: 38px;
+    padding: 0px;
+    border-color: #696cff !important;
+    background-color: #696cff !important;
+    color: #fff !important;
+    border-radius: .375rem;
+}
+
+.table-responsive {
+    padding: 0px 24px 24px 24px;
+}
+
+.dt-search .dt-input  {
+    margin-left: 16px !important;
+}
+
+.dt-length select  {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.datatables td {
+    height: 50px;
+}
+
+.datatables th:hover {
+    border: 0px;
+    outline: 0px !important;
+    outline-offset: 0px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.btn .bx {
+    line-height: 1.15;
+}
+
+.bx-md {
+    font-size: 1.375rem !important;
+}
+
+

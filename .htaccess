@@ -1,0 +1,18 @@
+# hide directory listing
+Options -Indexes
+
+RewriteEngine On
+
+# Preusmjeravanje http na https
+RewriteCond %{HTTPS} off
+#RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{REQUEST_URI} !^/admin/api/waze.php$
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Preskoči postojeće fajlove i direktorije
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Dinamičko preusmeravanje za rubrike
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ index.php?rubrika=$1 [L,QSA]
