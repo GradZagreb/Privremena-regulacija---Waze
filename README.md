@@ -10,7 +10,7 @@ Aplikacija Grada Zagreba za objavu privremene regulacije (zatvorenih prometnica)
 
 
 ### Instalacija/postavljanje aplikacije:
-- u proizvoljni direktorij PHP/Apache poslužitelja raspakirajte sadržaj datoteke "Aplikacija.zip"
+- u proizvoljni direktorij PHP/Apache poslužitelja klonirajte sadržaj repozitorija
 - kreirajte proizvoljnu bazu podataka i napravite restore/import baze iz datoteke "baza.sql"
 - u datoteci "config.inc.php" podesite tražene parametre za spajanje na bazu podataka, povezivanje s Waze platformom i sl.
 
