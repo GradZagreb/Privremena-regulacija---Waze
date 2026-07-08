@@ -23,6 +23,7 @@ function getCoordinates($address) {
     }
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    curl_setopt($ch, CURLOPT_USERAGENT , 'Zagreb-PrivremenaRegulacija/1.0');
     
     if (CURLREFERER != "")
         curl_setopt($ch, CURLOPT_REFERER, CURLREFERER);
