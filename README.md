@@ -5,14 +5,16 @@ Aplikacija Grada Zagreba za objavu privremene regulacije (zatvorenih prometnica)
 - PHP poslužitelj (testirano na Apache 2.4.62 i PHP 8.3.13)
 - MySQL baza podataka (testirano na 8.0.40)
 - Waze for cities račun s korisničkim podacima za prijavu te tokenom za reverse geocoding
-- u Waze for cities platformi postavljen API za dohvat podataka s vaše aplikacije - URL do home/admin/api/waze.php
+- u Waze for cities platformi postavljen API za dohvat podataka s vaše aplikacije - URL do *home/admin/api/waze.php*
 - aplikacija koristi besplatnu inačicu Sneat html predloška - obavezno proučiti i pridržavati se licence čiji se uvjeti nalaze na https://themewagon.com/license/
 
 
 ### Instalacija/postavljanje aplikacije:
 - u home/root direktorij PHP/Apache poslužitelja klonirajte sadržaj repozitorija
-- kreirajte proizvoljnu bazu podataka i napravite restore/import baze iz datoteke "baza.sql"
-- u datoteci "config.inc.php" podesite tražene parametre za spajanje na bazu podataka, povezivanje s Waze platformom i sl.
+- kreirajte proizvoljnu bazu podataka i napravite restore/import baze iz datoteke *baza.sql*
+- u datoteci *config.inc.php* podesite tražene parametre za spajanje na bazu podataka, povezivanje s Waze platformom i sl.
+- u datoteci */stranice/zatvaranjeNovoUredi/ajax/geocode.php* u naredbi `$address="Zagreb, ".$address;` zamijeniti "Zagreb" s gradom za kojeg se pretražuju ulice
+- u datoteci */stranice/zatvaranjeNovoUredi/ajax/geocode.php* u naredbi `curl_setopt($ch, CURLOPT_USERAGENT , 'Zagreb-PrivremenaRegulacija/1.0');` zamijeniti "Zagreb-PrivremenaRegulacija/1.0" s nazivom Vaše aplikacije. Navedeni naziv se koristi prilikom poziva API-ja
 
 ### Korištenje aplikacije:
 - pristupite aplikaciji putem preglednika
